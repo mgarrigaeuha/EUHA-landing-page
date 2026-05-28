@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharePoint Page</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3f2f1;
+    color: #323130;
+    line-height: 1.5;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+    color: #fff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .header p {
+    font-size: 14px;
+    opacity: 0.95;
+  }
+  
+  /* Card Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1.6px 3.6px rgba(0,0,0,0.13), 0 0.3px 0.9px rgba(0,0,0,0.11);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6.4px 14.4px rgba(0,0,0,0.13), 0 1.2px 3.6px rgba(0,0,0,0.11);
+  }
+  
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    background: #deecf9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0078d4;
+  }
+  
+  .card p {
+    font-size: 13px;
+    color: #605e5c;
+  }
+  
+  /* Section */
+  .section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1.6px 3.6px rgba(0,0,0,0.13);
+  }
+  
+  .section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0078d4;
+    color: #323130;
+  }
+  
+  /* News list */
+  .news-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #edebe9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .news-item:last-child { border-bottom: none; }
+  
+  .news-title {
+    font-weight: 500;
+    color: #323130;
+  }
+  
+  .news-date {
+    font-size: 12px;
+    color: #605e5c;
+  }
+  
+  /* Button */
+  .btn {
+    display: inline-block;
+    background: #0078d4;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .btn:hover { background: #106ebe; }
+  
+  @media (max-width: 600px) {
+    .header h1 { font-size: 22px; }
+    body { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="header">
+      <h1>Welcome to Our Team Hub</h1>
+      <p>Your central place for resources, news, and quick links</p>
+    </div>
+    
+    <div class="grid">
+      <div class="card" onclick="window.open('https://example.com', '_blank')">
+        <div class="card-icon">📊</div>
+        <h3>Reports</h3>
+        <p>Access dashboards and analytics</p>
+      </div>
+      <div class="card" onclick="window.open('https://example.com', '_blank')">
+        <div class="card-icon">📁</div>
+        <h3>Documents</h3>
+        <p>Browse shared files and templates</p>
+      </div>
+      <div class="card" onclick="window.open('https://example.com', '_blank')">
+        <div class="card-icon">👥</div>
+        <h3>Team Directory</h3>
+        <p>Find contacts and org chart</p>
+      </div>
+      <div class="card" onclick="window.open('https://example.com', '_blank')">
+        <div class="card-icon">📅</div>
+        <h3>Calendar</h3>
+        <p>View events and deadlines</p>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Latest News</h2>
+      <div class="news-item">
+        <span class="news-title">Q2 Results Announcement</span>
+        <span class="news-date">May 27, 2026</span>
+      </div>
+      <div class="news-item">
+        <span class="news-title">New HR Policy Update</span>
+        <span class="news-date">May 24, 2026</span>
+      </div>
+      <div class="news-item">
+        <span class="news-title">Office Closure Notice</span>
+        <span class="news-date">May 20, 2026</span>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>Quick Actions</h2>
+      <p style="margin-bottom: 12px;">Need to submit a request or get support?</p>
+      <button class="btn" onclick="alert('Opening request form...')">Submit Request</button>
+    </div>
+    
+  </div>
+</body>
+</html>
